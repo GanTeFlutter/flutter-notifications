@@ -27,6 +27,7 @@ dependencies:
   #Gerekli paketler
   flutter_local_notifications: ^19.5.0
   timezone: ^0.10.1
+  firebase_messaging: ^16.0.3
 
 
 
