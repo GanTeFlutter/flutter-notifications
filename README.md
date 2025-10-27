@@ -16,4 +16,5 @@
 </p>
 
 
-Service kısmında claud tan yardım alıdm daha sonra bloc ile bunu uygulamada daha kullanılışlı hale getireceğim service kısmını o zaman elden geçireceğim ama şu anlık güzel çalışıyor tabiki dikattli olmak lazım :)
+
+Service kısmında şu an için Cloud’dan yardım aldım. Daha sonra Bloc ile entegre ederek uygulamada daha kullanışlı hâle getireceğim. Şu anlık güzel çalışıyor, tabii ki dikkatli olmak lazım. 🙂
