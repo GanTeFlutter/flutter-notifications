@@ -1,4 +1,3 @@
-
 part of '../home_view.dart';
 
 final class _ActionButtonsSection extends StatelessWidget {
@@ -24,7 +23,6 @@ final class _ActionButtonsSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // Row for Send/Schedule/Periodic
           Row(
             children: [
               Expanded(
@@ -62,7 +60,7 @@ final class _ActionButtonsSection extends StatelessWidget {
             ),
           ),
           const Divider(height: 32),
-          // Row for Refresh/Cancel All
+
           Row(
             children: [
               Expanded(

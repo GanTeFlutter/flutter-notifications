@@ -9,13 +9,12 @@ void setupLocator() {
 }
 
 void _registerSingletons() {
-  locator..registerSingleton<LoggerService>(LoggerService())
+  locator
+    ..registerSingleton<LoggerService>(LoggerService())
     ..registerSingleton<NotificationService>(NotificationService());
-
 }
 
 extension ServiceLocator on GetIt {
   LoggerService get logger => locator<LoggerService>();
-    NotificationService get notification => locator<NotificationService>();
-
+  NotificationService get notification => locator<NotificationService>();
 }

@@ -5,16 +5,13 @@ import 'package:flutter_notifications/product/service/service_locator.dart';
 import 'package:flutter_notifications/product/service/services/notification_service.dart';
 
 mixin HomeViewMixin on State<HomeView> {
-  // Controllers
   final formKey = GlobalKey<FormState>();
   final titleController = TextEditingController();
   final bodyController = TextEditingController();
   final delayController = TextEditingController(text: '5');
 
-  // Service
   late final NotificationService notificationService;
 
-  // State
   String pendingNotificationsInfo = 'Bekleyen bildirim yok';
   bool isLoading = false;
 
@@ -32,7 +29,6 @@ mixin HomeViewMixin on State<HomeView> {
     super.dispose();
   }
 
-  // SnackBar göster
   Future<void> showSnackBar(String message, {bool isError = false}) async {
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
@@ -45,7 +41,6 @@ mixin HomeViewMixin on State<HomeView> {
     );
   }
 
-  // Bekleyen bildirimleri güncelle
   Future<void> updatePendingNotifications() async {
     setState(() => isLoading = true);
     try {
@@ -62,7 +57,6 @@ mixin HomeViewMixin on State<HomeView> {
     }
   }
 
-  // Anında bildirim gönder
   Future<void> sendInstantNotification() async {
     if (!formKey.currentState!.validate()) return;
 
@@ -81,7 +75,6 @@ mixin HomeViewMixin on State<HomeView> {
     }
   }
 
-  // Zamanlanmış bildirim gönder
   Future<void> scheduleNotification() async {
     if (!formKey.currentState!.validate()) return;
 
@@ -110,7 +103,6 @@ mixin HomeViewMixin on State<HomeView> {
     }
   }
 
-  // Periyodik bildirim gönder
   Future<void> sendPeriodicNotification() async {
     if (!formKey.currentState!.validate()) return;
 
@@ -130,7 +122,6 @@ mixin HomeViewMixin on State<HomeView> {
     }
   }
 
-  // Tüm bildirimleri iptal et
   Future<void> cancelAllNotifications() async {
     setState(() => isLoading = true);
     try {

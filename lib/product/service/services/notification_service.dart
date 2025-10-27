@@ -5,14 +5,12 @@ import 'package:timezone/timezone.dart' as tz;
 class NotificationService {
   factory NotificationService() => _instance;
 
-  /// Singleton pattern
   NotificationService._internal();
   late FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin;
   int _notificationId = 0;
   bool _isInitialized = false;
   static final NotificationService _instance = NotificationService._internal();
 
-  /// Service'i başlat
   Future<void> initialize({
     void Function(NotificationResponse)? onNotificationTapped,
   }) async {
@@ -40,7 +38,6 @@ class NotificationService {
         },
       );
 
-      // Android 13+ için bildirim izni iste
       await _requestNotificationPermission();
 
       _isInitialized = true;
@@ -52,7 +49,6 @@ class NotificationService {
     }
   }
 
-  /// Android 13+ bildirim izni iste
   Future<bool> _requestNotificationPermission() async {
     try {
       final androidImplementation = _flutterLocalNotificationsPlugin
@@ -79,7 +75,6 @@ class NotificationService {
     }
   }
 
-  /// Anında bildirim göster
   Future<void> showInstantNotification({
     required String title,
     required String body,
@@ -119,7 +114,6 @@ class NotificationService {
     }
   }
 
-  /// Zamanlanmış bildirim göster
   Future<void> scheduleNotification({
     required String title,
     required String body,
@@ -164,7 +158,6 @@ class NotificationService {
     }
   }
 
-  /// Belirli bir tarihte bildirim göster
   Future<void> scheduleNotificationAt({
     required String title,
     required String body,
@@ -208,7 +201,6 @@ class NotificationService {
     }
   }
 
-  /// Periyodik bildirim göster
   Future<void> showPeriodicNotification({
     required String title,
     required String body,
@@ -250,7 +242,6 @@ class NotificationService {
     }
   }
 
-  /// Belirli bir bildirimi iptal et
   Future<void> cancelNotification(int id) async {
     _checkInitialized();
 
@@ -263,7 +254,6 @@ class NotificationService {
     }
   }
 
-  /// Tüm bildirimleri iptal et
   Future<void> cancelAllNotifications() async {
     _checkInitialized();
 
@@ -276,7 +266,6 @@ class NotificationService {
     }
   }
 
-  /// Bekleyen bildirimleri getir
   Future<List<PendingNotificationRequest>> getPendingNotifications() async {
     _checkInitialized();
 
@@ -293,7 +282,6 @@ class NotificationService {
     }
   }
 
-  /// Aktif bildirimleri getir (Android 6.0+, iOS 10.0+, macOS 10.14+)
   Future<List<ActiveNotification>> getActiveNotifications() async {
     _checkInitialized();
 
@@ -310,7 +298,6 @@ class NotificationService {
     }
   }
 
-  /// Service başlatılmış mı kontrolü
   void _checkInitialized() {
     if (!_isInitialized) {
       throw StateError(
@@ -319,9 +306,7 @@ class NotificationService {
     }
   }
 
-  /// Service durumunu kontrol et
   bool get isInitialized => _isInitialized;
 
-  /// Sonraki bildirim ID'sini al
   int get nextNotificationId => _notificationId;
 }
