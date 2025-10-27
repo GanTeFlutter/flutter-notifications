@@ -16,21 +16,15 @@ dependencies:
     sdk: flutter
   
   cupertino_icons: ^1.0.8
-  
   meta: ^1.16.0
-  
   flutter_bloc: ^9.1.1
 
-  get_it: ^8.2.0
- 
-  
+  #olmasa da olur
   go_router: ^16.2.4
-
-  
   logger: ^2.6.1
+  get_it: ^8.2.0
 
-  
-  dio: ^5.9.0
+  #Gerekli paketler
   flutter_local_notifications: ^19.5.0
   timezone: ^0.10.1
 
