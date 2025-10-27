@@ -18,3 +18,5 @@
 
 
 Service kısmında şu an için Cloud’dan yardım aldım. Daha sonra Bloc ile entegre ederek uygulamada daha kullanışlı hâle getireceğim. Şu anlık güzel çalışıyor, tabii ki dikkatli olmak lazım. 🙂
+
+.
