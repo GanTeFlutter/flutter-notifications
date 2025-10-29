@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_notifications/future/home/mixin/home_view_mixin.dart';
+import 'package:flutter_notifications/future/local_message/mixin/home_view_mixin.dart';
 
 part 'widget/action_buttons_section.dart';
 part 'widget/notification_form_fields.dart';

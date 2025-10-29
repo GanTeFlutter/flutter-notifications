@@ -5,7 +5,7 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const SplashView();
+        return const ScreenNavigate3();
       },
       routes: <RouteBase>[
         GoRoute(
@@ -13,6 +13,13 @@ final GoRouter _router = GoRouter(
           name: 'NotificationView',
           builder: (BuildContext context, GoRouterState state) {
             return const HomeView();
+          },
+        ),
+        GoRoute(
+          path: '/notificationScreen',
+          name: 'NotificationScreen',
+          builder: (BuildContext context, GoRouterState state) {
+            return const NotificationScreen();
           },
         ),
       ],

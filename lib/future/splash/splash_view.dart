@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notifications/future/firebase_message/screen_navigate.dart';
 import 'package:go_router/go_router.dart';
 
 class SplashView extends StatefulWidget {
@@ -24,7 +25,26 @@ class _SplashViewState extends State<SplashView> {
               },
               child: const Text('Go to NotificationView'),
             ),
-           
+            ElevatedButton(
+              onPressed: () {
+                context.goNamed('NotificationScreen');
+              },
+              child: const Text('Go to NotificationScreen'),
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const NotificationTestScreen();
+                    },
+                  ),
+                );
+              },
+              child: const Text('Go to NotificationScreen (path)'),
+            ),
           ],
         ),
       ),

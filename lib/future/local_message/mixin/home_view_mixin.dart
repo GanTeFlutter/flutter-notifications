@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_notifications/future/home/home_view.dart';
+import 'package:flutter_notifications/future/local_message/home_view.dart';
 import 'package:flutter_notifications/product/service/service_locator.dart';
 import 'package:flutter_notifications/product/service/services/notification_service.dart';
 
